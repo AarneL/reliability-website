@@ -32,4 +32,3 @@ jobs:
         git add index.html
         git commit -m "Update data and regenerate site"
         git push origin master
-
