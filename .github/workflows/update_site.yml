@@ -2,7 +2,7 @@ name: Update GitHub Pages
 
 on:
   schedule:
-    - cron: '* * * * *'  # Tämä ajaa työn joka päivä keskiyöllä UTC-ajassa
+    - cron: '9 * * * *'  # Tämä ajaa työn joka päivä keskiyöllä UTC-ajassa
 
 jobs:
   build:
