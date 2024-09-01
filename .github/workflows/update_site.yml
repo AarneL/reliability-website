@@ -31,5 +31,5 @@ jobs:
         git config --local user.name "AarneL"
         git add index.html
         git commit -m "Update data and regenerate site"
-        git push origin master
+        git push origin main
 
