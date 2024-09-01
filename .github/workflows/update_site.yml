@@ -2,7 +2,7 @@ name: Update GitHub Pages
 
 on:
   schedule:
-    - cron: '9 * * * *'  # Tämä ajaa työn joka päivä keskiyöllä UTC-ajassa
+    - cron: '12 * * * *'  # Tämä ajaa työn joka päivä keskiyöllä UTC-ajassa
 
 jobs:
   build:
@@ -32,3 +32,4 @@ jobs:
         git add index.html
         git commit -m "Update data and regenerate site"
         git push origin master
+
