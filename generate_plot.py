@@ -1,10 +1,11 @@
 import plotly.express as px
 import pandas as pd
+import numpy as np  # Lisää tämä rivi
 
 # 1. Mockup-datan generointi
 data = {
     'Aika': pd.date_range(start='1/1/2024', periods=100, freq='D'),
-    'Arvo': pd.np.random.rand(100) * 100
+    'Arvo': np.random.rand(100) * 100  # Käytä numpyta suoraan
 }
 df = pd.DataFrame(data)
 
@@ -31,4 +32,3 @@ html_content = f"""
 
 with open('index.html', 'w') as f:
     f.write(html_content)
-
