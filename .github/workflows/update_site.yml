@@ -1,9 +1,7 @@
 name: Update GitHub Pages
 run-name: ${{ github.actor }} is testing out GitHub Actions again again 🚀
 
-on:
-  schedule:
-    - cron: '* * * * *'  
+on: [push]
 
 jobs:
   build:
