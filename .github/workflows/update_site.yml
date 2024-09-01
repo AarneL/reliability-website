@@ -1,0 +1,35 @@
+name: Update GitHub Pages
+
+on:
+  schedule:
+    - cron: '* * * * *'  # Tämä ajaa työn joka päivä keskiyöllä UTC-ajassa
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository content
+      uses: actions/checkout@v2
+
+    - name: Setup Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        pip install plotly pandas
+
+    - name: Generate new plot and update HTML
+      run: |
+        python generate_plot.py  # Ajaa skriptin, joka päivittää index.html-tiedoston
+
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "your-email@example.com"
+        git config --local user.name "Your Name"
+        git add index.html
+        git commit -m "Update data and regenerate site"
+        git push origin master
+
