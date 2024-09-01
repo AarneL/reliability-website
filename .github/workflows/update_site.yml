@@ -1,4 +1,5 @@
 name: Update GitHub Pages
+run-name: ${{ github.actor }} is testing out GitHub Actions again again 🚀
 
 on:
   schedule:
@@ -9,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
     - name: Checkout repository content
       uses: actions/checkout@v2
 
