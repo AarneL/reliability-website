@@ -29,7 +29,6 @@ jobs:
 
     - name: Commit and push changes
       run: |
-        git config --local user.email "liski.aarne@gmail.com"
         git config --local user.name "AarneL"
         git add index.html
         git commit -m "Update data and regenerate site"
